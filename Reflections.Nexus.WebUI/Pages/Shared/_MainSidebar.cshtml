@@ -1,0 +1,442 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor Accessor
+
+<!-- Main sidebar -->
+<div class="sidebar sidebar-dark sidebar-main sidebar-expand-lg">
+
+	<!-- Sidebar content -->
+	<div class="sidebar-content">
+
+		<!-- Sidebar header -->
+		<div class="sidebar-section">
+			<div class="sidebar-section-body d-flex justify-content-center">
+				<h5 class="sidebar-resize-hide flex-grow-1 my-auto">Navigation</h5>
+
+				<div>
+					<button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-control sidebar-main-resize d-none d-lg-inline-flex">
+						<i class="ph-arrows-left-right"></i>
+					</button>
+
+					<button type="button" class="btn btn-flat-white btn-icon btn-sm rounded-pill border-transparent sidebar-mobile-main-toggle d-lg-none">
+						<i class="ph-x"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- /sidebar header -->
+		<!-- Main navigation -->
+		<div class="sidebar-section">
+			<ul class="nav nav-sidebar" data-nav-type="accordion">
+
+				<li class="nav-item">
+					<a href="~/" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().Equals("/") ? "active" : "" )">
+						<i class="ph-house"></i>
+						<span>Home</span>
+					</a>
+				</li>
+
+				<!-- All employee files -->
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Administrator") || User.IsInRole("hr") || User.IsInRole("MD") || User.IsInRole("CEO")))
+				{ 
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Employees</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+					<li class="nav-item">
+						<a href="~/employee" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employee") ? "active" : "" )">
+							<i class="ph-users-three"></i>
+							<span>Employee</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/employeerequest" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employeerequest") ? "active" : "" )">
+							<i class="ph-identification-card"></i>
+							<span>Requests</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/employeefile" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employeefile") ? "active" : "" )">
+							<i class="ph-files"></i>
+							<span>Employee Files</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/account" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/account") ? "active" : "" )">
+							
+							<i class="ph-at"></i>
+							<span>Accounts</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/RecievedRequests" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/RecievedRequests") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Recieved Requests</span>
+						</a>
+					</li>
+					<br />
+
+				}
+
+				<!-- Company -->
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Administrator") || User.IsInRole("MD") || User.IsInRole("CEO")))
+				{
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Company</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+					<li class="nav-item">
+						<a href="~/company" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/company") ? "active" : "" )">
+							<i class="ph-newspaper-clipping"></i>
+							<span>Company</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/companyfile" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/companyfile") ? "active" : "" )">
+							<i class="ph-address-book"></i>
+							<span>Company Files</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="/department" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/department") ? "active" : "" )">
+							<i class="ph-buildings"></i>
+							<span>Departments</span>
+						</a>
+					</li>
+
+					<br />
+
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Head Count</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/headcountitem" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/headcountitem") ? "active" : "" )">
+							<i class="icon-users2"></i>
+							<span>Head Count Item</span>
+						</a>
+					</li>
+				}
+				
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Administrator") || User.IsInRole("hr") || User.IsInRole("MD") || User.IsInRole("CEO")))
+				{
+					<br />
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">HR</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/headcountitemhr" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/headcountitemhr") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Head Count HR</span>
+						</a>
+					</li>
+
+				}
+
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Administrator") || User.IsInRole("It") || User.IsInRole("CEO") || User.IsInRole("MD")))
+				{
+					<br />
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">IT</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/headcountitemit" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/headcountitemit") ? "active" : "" )">
+							<i class="ph-database"></i>
+							<span>Head Count IT</span>
+						</a>
+					</li>
+				}
+
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Manager") || User.IsInRole("MD") || User.IsInRole("CEO")))
+				{
+					<br />
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Manager</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/employeemanager" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employeemanager") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Employees Dashboard</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/headcountitemmanager" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/headcountitemmanager") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Head Count Dashboard</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/telephonemanager" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/telephonemanager") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>View Dempartment's Employees' Numbers</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/RecievedRequests" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/RecievedRequests") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Recieved Requests</span>
+						</a>
+					</li>
+					<br />
+				}
+
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Employee")))
+				{
+					<br />
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Employee</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/employeepage" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employeepage") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>View Your Data</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/headcountitememployee" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/headcountitememployee") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Employee Head Count Dashboard</span>
+						</a>
+					</li>
+
+
+
+					<li class="nav-item">
+						<a href="~/ShowMyRequests" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/ShowMyRequests") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Show My Requests</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/telephoneemployee" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/telephoneemployee") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>View Phone Numbers</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/EmployeeRequest/Create" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/EmployeeRequest/Create") ? "active" : "" )">
+							<i class="ph-stack"></i>
+							<span>Send A Request</span>
+						</a>
+					</li>
+				}
+
+				<!-- Reports -->
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Administrator") || User.IsInRole("hr") || User.IsInRole("CEO") || User.IsInRole("MD")))
+				{
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Reports</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+					<li class="nav-item">
+						<a href="~/Turnover" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/Turnover") ? "active" : "" )">
+							<i class="ph-chart-line-up"></i>
+							<span>Turnover Statistics</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/Attrition" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/Attrition") ? "active" : "" )">
+							<i class="ph-percent"></i>
+							<span>Attrition Percentage</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/salarystatistics" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/salarystatistics") ? "active" : "" )">
+							<i class="ph-money"></i>
+							<span>Salary Statistics</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/EmployeesInDepartments" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/EmployeesInDepartments") ? "active" : "" )">
+							<i class="icon-user-tie"></i>
+							<span>Employees In Departments</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/DepartmentsStatistics" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/DepartmentsStatistics") ? "active" : "" )">
+							<i class="ph-chart-pie-slice"></i>
+							<span>Department Statistics</span>
+						</a>
+					</li>
+				}
+
+
+				@if (User.Identity.IsAuthenticated && (User.IsInRole("Administrator") || User.IsInRole("CEO") || User.IsInRole("MD") ))
+				{
+					<br />
+					<li class="nav-item-header pt-0">
+						<div class="text-uppercase fs-sm lh-sm opacity-50 sidebar-resize-hide">Configuration</div>
+						<i class="ph-dots-three sidebar-resize-show"></i>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/roles" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/roles") ? "active" : "" )">
+							<i class="ph-diamonds-four"></i>
+							<span>Roles</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/gender" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/gender") ? "active" : "" )">
+							<i class="icon-man"></i>
+							<span>Gender</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/employmenttype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employmenttype") ? "active" : "" )">
+							<i class="icon-vcard"></i>
+							<span>Employment Type</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/identificationtype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/identificationtype") ? "active" : "" )">
+							<i class="icon-user-check"></i>
+							<span>Identification Type</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/jobtitle" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/jobtitle") ? "active" : "" )">
+							<i class="icon-typewriter"></i>
+							<span>Job Title</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/jobtype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/jobtype") ? "active" : "" )">
+							<i class="icon-man"></i>
+							<span>Job Type</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/maritalstatus" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/maritalstatus") ? "active" : "" )">
+							<i class="icon-theater"></i>
+							<span>Marital Status</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/militarystatus" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/militarystatus") ? "active" : "" )">
+							<i class="icon-user-tie"></i>
+							<span>Military Status</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="~/workingmodel" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/workingmodel") ? "active" : "" )">
+							<i class="ph-suitcase"></i>
+							<span>Working Model</span>
+						</a>
+					</li>
+
+
+					<li class="nav-item">
+						<a href="~/accountrole" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/accountrole") ? "active" : "" )">
+							<i class="icon-alert"></i>
+							<span>Account Roles</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/companyfiletype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/companyfiletype") ? "active" : "" )">
+							<i class="icon-stack-plus"></i>
+							<span>Company File Type</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/employeefiletype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employeefiletype") ? "active" : "" )">
+							<i class="ph-file-text"></i>
+							<span>Employee File Type</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/employeetelephonenumber" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/employeetelephonenumber") ? "active" : "" )">
+							<i class="mi-phone-iphone"></i>
+							<span>Employee Telephone Number</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/companytelephonenumber" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/companytelephonenumber") ? "active" : "" )">
+							<i class="mi-phone"></i>
+							<span>Company Telephone Number</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/phonenumbertype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/phonenumbertype") ? "active" : "" )">
+							<i class="ph-phone-disconnect"></i>
+							<span>Phone Number Type</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/requeststatus" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/requeststatus") ? "active" : "" )">
+							<i class="mi-done-all"></i>
+							<span>Request Status</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/companytype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/companytype") ? "active" : "" )">
+							<i class="ph-codesandbox-logo"></i>
+							<span>Company Type</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/headcounttype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/headcounttype") ? "active" : "" )">
+							<i class="mi-event-note"></i>
+							<span>Head Count Type</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/industry" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/industry") ? "active" : "" )">
+							<i class="ph-cpu"></i>
+							<span>Industry</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/sociallinktype" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/sociallinktype") ? "active" : "" )">
+							<i class="icon-facebook"></i>
+							<span>Social Link Type</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/country" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/country") ? "active" : "" )">
+							<i class="mi-terrain"></i>
+							<span>Country</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="~/city" class="nav-link @(Accessor.HttpContext.Request.Path.Value.ToLower().StartsWith("/city") ? "active" : "" )">
+							<i class="ph-buildings"></i>
+							<span>City</span>
+						</a>
+					</li>
+				}
+
+			</ul>
+		</div>
+		<!-- /main navigation -->
+
+	</div>
+	<!-- /sidebar content -->
+
+</div>
+<!-- /main sidebar -->

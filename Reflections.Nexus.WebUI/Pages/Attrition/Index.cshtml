@@ -1,0 +1,69 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.Attrition.IndexModel
+
+@{
+    ViewData["Title"] = "List";
+    ViewData["Entity"] = "Attrition Statistics";
+    ViewData["BreadCrumb"] = "<a href='/Employees' class='breadcrumb-item'>Employees</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header pb-0">
+        <h5 class="mb-0">Attrition Statistics By Department</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <canvas id="departmentChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Prepare data for the chart
+    const departments = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Data2.Select(d => d.Department)));
+    const AttritionPercent = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Data2.Select(d => d.Statistic)));
+
+    const ctx = document.getElementById('departmentChart').getContext('2d');
+
+    const departmentChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: departments,
+            datasets: [ 
+                {
+                    label: 'Attrition Percentage',
+                    data: AttritionPercent,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Count / Percentage'
+                    }
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Attrition Persentage for each department'
+                }
+            }
+        }
+    });
+</script>
+

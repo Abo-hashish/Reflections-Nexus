@@ -1,0 +1,53 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.JobType.EditModel
+
+        @{
+        ViewData["Title"] = "Edit";
+        ViewData["Entity"] = "JobTypes";
+        ViewData["BreadCrumb"] = "<a href='/JobTypes' class='breadcrumb-item'>JobTypes</a>";
+        }
+        
+
+ <form method="post">
+    <div class="card">
+        <div class="card-header">
+             <h5 class="card-title mb-0">Edit JobType</h5>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                        <input type="hidden" asp-for="JobType.Id" />
+                        @* <input type="hidden" asp-for="JobType.Created" /> *@
+                        @* <input type="hidden" asp-for="JobType.CreatedBy"  /> *@
+                        @* <input type="hidden" asp-for="JobType.Updated" /> *@
+                        @* <input type="hidden" asp-for="JobType.UpdatedBy" /> *@
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="JobType.Value" class="control-label"></label>
+                                    <input asp-for="JobType.Value" class="form-control" />
+                                    <span asp-validation-for="JobType.Value" class="text-danger"></span>
+                                </div>
+                            </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+            <a asp-page="Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                Cancel
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-arrow-left8"></i>
+                </span>
+            </a>
+            <button type="submit" class="btn btn-primary btn-labeled btn-labeled-end">
+                Save
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-paperplane"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+

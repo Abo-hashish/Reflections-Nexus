@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[SocialLinkType] (
+    [Id]   INT           IDENTITY (1, 1) NOT NULL,
+    [Value] NVARCHAR (50) UNIQUE NOT NULL,
+    CONSTRAINT [PK__SocialLi__3214EC079574A20A] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

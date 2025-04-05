@@ -1,0 +1,77 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+
+    <!-- Include Fireworks.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.0.0/dist/index.min.js"></script>
+</head>
+<body>
+
+    <div class="welcome-container">
+        <h1>Welcome to My Reflection!</h1>
+        <p>We are glad to have you here. Explore and enjoy the content we've prepared just for you.</p>
+        <a href="javascript:void(0);" class="btn-welcome" onclick="showPopup()">Start Exploring</a>
+
+        <!-- Popup message -->
+        <div id="popup" class="popup-message">
+            🎉 Woohoo! You're on your way to an awesome journey! 🎉
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            // Show the popup message
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+
+            // Play a cheerful sound
+            var audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // Example cheerful sound
+            audio.play();
+
+            // Start fireworks explosion
+            startFireworks();
+
+            // Hide the popup after 3 seconds
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 3000);
+        }
+
+        // Start Fireworks effect using Fireworks.js library
+        function startFireworks() {
+            const container = document.body; // You can change this to a specific container
+            const fireworks = new Fireworks(container, {
+                speed: 3, // Speed of the fireworks
+                acceleration: 1.05, // Acceleration of particles
+                friction: 0.98, // Friction of particles
+                gravity: 1, // Gravity affecting particles
+                particles: 100, // Number of particles
+                trace: 3, // Trace effect for particles
+                explosion: 5, // Explosion size
+                x: container.clientWidth / 2, // X position of the origin
+                y: container.clientHeight / 2, // Y position of the origin
+                hue: { min: 0, max: 360 }, // Hue color range
+                delay: { min: 10, max: 20 }, // Delay between explosions
+            });
+            fireworks.start();
+        }
+    </script>
+
+</body>
+</html>

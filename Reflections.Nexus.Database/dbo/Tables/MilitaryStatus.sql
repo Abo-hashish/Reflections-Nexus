@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[MilitaryStatus] (
+    [Id]   INT           IDENTITY (1, 1) NOT NULL,
+    [Value] NVARCHAR (50) UNIQUE NOT NULL,
+    CONSTRAINT [PK__Military__3214EC2797640630] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

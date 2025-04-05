@@ -1,0 +1,144 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.EmployeeFile.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Entity"] = "EmployeeFiles";
+    ViewData["BreadCrumb"] = "<a href='/EmployeeFiles' class='breadcrumb-item'>EmployeeFiles</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+
+    <div class="card-header">
+        <h5 class="card-title mb-0">View EmployeeFile Details</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-2  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.Id)
+                                    </label>
+                                    <div class="col-lg-10">
+                                        @Html.DisplayFor(model => model.EmployeeFile.Id)
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.FileUrl)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.EmployeeFile.FileUrl)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.Created)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.EmployeeFile.Created)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.CreatedBy)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.EmployeeFile.CreatedBy)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.Updated)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.EmployeeFile.Updated)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.UpdatedBy)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.EmployeeFile.UpdatedBy)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.EmployeeFile.RowVersion)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.EmployeeFile.RowVersion)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.EmployeeFile.Employee)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.EmployeeFile.Employee.Address)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.EmployeeFile.FileType)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.EmployeeFile.FileType.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+        <a asp-page="./Index" class="btn btn-primary btn-labeled btn-labeled-start">
+            Back
+            <span class="btn-labeled-icon bg-black bg-opacity-20">
+                <i class="icon-arrow-left8"></i>
+            </span>
+        </a>
+        <a asp-page="./Edit" class="btn btn-primary btn-labeled btn-labeled-end" asp-route-id="@Model.EmployeeFile.Id">
+                Edit
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-pencil7"></i>
+                </span>
+            </a>
+</div>
+</div>
+

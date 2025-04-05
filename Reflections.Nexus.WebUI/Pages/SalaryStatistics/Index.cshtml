@@ -1,0 +1,59 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.SalaryStatistics.IndexModel
+
+@{
+    ViewData["Title"] = "List";
+    ViewData["Entity"] = "Salary Statistics";
+    ViewData["BreadCrumb"] = "<a href='/HeadCountItems' class='breadcrumb-item'>HeadCountItems</a>";
+}
+
+
+<div class="container">
+    <div class="row">
+        <!-- Card for Average Salary -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h5 class="mb-0">Average Salary</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="display-4">@Model.AverageSalary.ToString("C")</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Maximum Salary -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h5 class="mb-0">Maximum Salary</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="display-4">@Model.MaximumSalary.ToString("C")</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card for Minimum Salary -->
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    <h5 class="mb-0">Minimum Salary</h5>
+                </div>
+                <div class="card-body">
+                    <h1 class="display-4">@Model.MinimumSalary.ToString("C")</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@* <div class="card"> *@
+@*     <div class="card-header pb-0"> *@
+@*         <h5 class="mb-0">Salary Statistics</h5> *@
+@*         <p>Average Salary: @Model.AverageSalary.ToString("C")</p> *@
+@*         <p>Maximum Salary: @Model.MaximumSalary.ToString("C")</p> *@
+@*         <p>Minimum Salary: @Model.MinimumSalary.ToString("C")</p> *@
+@*     </div> *@
+@* </div> *@

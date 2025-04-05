@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[WorkingModel] (
+    [Id]    INT           IDENTITY (1, 1) NOT NULL,
+    [Value] NVARCHAR (50) UNIQUE NOT NULL,
+    CONSTRAINT [PK__WorkingM__3214EC275B84BC05] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

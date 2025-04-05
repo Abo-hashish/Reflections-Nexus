@@ -1,0 +1,156 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.CompanytelephoneNumber.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Entity"] = "CompanyEmployeeTelephoneNumber";
+    ViewData["BreadCrumb"] = "<a href='/CompanyEmployeeTelephoneNumber' class='breadcrumb-item'>CompanyEmployeeTelephoneNumber</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+
+    <div class="card-header">
+        <h5 class="card-title mb-0">View CompanyTelephoneNumber Details</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-2  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.Id)
+                                    </label>
+                                    <div class="col-lg-10">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.Id)
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.PhoneNumber)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.PhoneNumber)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.IsPrimary)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.IsPrimary)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.Created)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.Created)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.CreatedBy)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.CreatedBy)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.Updated)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.Updated)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.UpdatedBy)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.UpdatedBy)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.RowVersion)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyTelephoneNumber.RowVersion)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.Company)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.CompanyTelephoneNumber.Company.Address)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.Type)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.CompanyTelephoneNumber.Type.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+        <a asp-page="./Index" class="btn btn-primary btn-labeled btn-labeled-start">
+            Back
+            <span class="btn-labeled-icon bg-black bg-opacity-20">
+                <i class="icon-arrow-left8"></i>
+            </span>
+        </a>
+        <a asp-page="./Edit" class="btn btn-primary btn-labeled btn-labeled-end" asp-route-id="@Model.CompanyTelephoneNumber.Id">
+                Edit
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-pencil7"></i>
+                </span>
+            </a>
+</div>
+</div>
+

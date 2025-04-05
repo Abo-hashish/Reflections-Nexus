@@ -1,0 +1,75 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.Turnover.IndexModel
+
+@{
+    ViewData["Title"] = "List";
+    ViewData["Entity"] = "Turnover Statistics";
+    ViewData["BreadCrumb"] = "<a href='/Employees' class='breadcrumb-item'>Employees</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header pb-0">
+        <h5 class="mb-0">Employee Count and Turnover Percentage by Department</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <canvas id="departmentChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>v
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const departments = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Data2.Select(d => d.Department)));
+    const employeeCounts = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Data2.Select(d => d.Count1)));
+    const turnoverPercentages = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Data2.Select(d => d.Count2)));
+
+    const ctx = document.getElementById('departmentChart').getContext('2d');
+
+    const departmentChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: departments,
+            datasets: [
+                {
+                    label: 'One year or more',
+                    data: employeeCounts,
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Less Than One year',
+                    data: turnoverPercentages,
+                    backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Count / Percentage'
+                    }
+                }
+            },
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Employee Turnover rate compared By Employee Count That Lasted for more or less than one year'
+                }
+            }
+        }
+    });
+</script>
+

@@ -1,0 +1,71 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.RecievedRequests.EditModel
+
+        @{
+        ViewData["Title"] = "Edit";
+        ViewData["Entity"] = "EmployeeRequests";
+        ViewData["BreadCrumb"] = "<a href='/EmployeeRequests' class='breadcrumb-item'>EmployeeRequests</a>";
+                Layout = "~/Pages/Shared/_Layout.cshtml";
+        }
+        
+
+ <form method="post">
+    <div class="card">
+        <div class="card-header">
+             <h5 class="card-title mb-0">Edit EmployeeRequest</h5>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                        <input type="hidden" asp-for="EmployeeRequest.Id" />
+                        <input type="hidden" asp-for="EmployeeRequest.Created" />
+                        <input type="hidden" asp-for="EmployeeRequest.CreatedBy"  />
+                        <input type="hidden" asp-for="EmployeeRequest.Updated" />
+                        <input type="hidden" asp-for="EmployeeRequest.UpdatedBy" />
+                <input type="hidden" asp-for="EmployeeRequest.RowVersion" />
+                            @* <div class="col-lg-6"> *@
+                            @*     <div class="form-group"> *@
+                            @*         <label asp-for="EmployeeRequest.NotificationId" class="control-label"></label> *@
+                            @*         <select asp-for="EmployeeRequest.NotificationId" class="form-control" asp-items="ViewBag.NotificationId"></select> *@
+                            @*         <span asp-validation-for="EmployeeRequest.NotificationId" class="text-danger"></span> *@
+                            @*     </div> *@
+                            @* </div> *@
+                            
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="EmployeeRequest.StatusId" class="control-label"></label>
+                                    <select asp-for="EmployeeRequest.StatusId" class="form-control" asp-items="ViewBag.StatusId"></select>
+                                    <span asp-validation-for="EmployeeRequest.StatusId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label asp-for="EmployeeRequest.Notes" class="control-label"></label>
+                                    <input asp-for="EmployeeRequest.Notes" class="form-control" />
+                                    <span asp-validation-for="EmployeeRequest.Notes" class="text-danger"></span>
+                                </div>
+                            </div>
+
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+            <a asp-page="Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                Cancel
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-arrow-left8"></i>
+                </span>
+            </a>
+            <button type="submit" class="btn btn-primary btn-labeled btn-labeled-end">
+                Save
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-paperplane"></i>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>
+
+        @section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }
+

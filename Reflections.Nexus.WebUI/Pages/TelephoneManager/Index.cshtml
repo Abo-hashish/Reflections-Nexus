@@ -1,0 +1,45 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.TelephoneManager.IndexModel
+
+@{
+    ViewData["Title"] = "Employee Telephone Numbers";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header pb-0">
+        <h5 class="mb-0">Employee Telephone Numbers List</h5>
+    </div>
+    <div class="table-responsive">
+        <table class="table datatable table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Phone Number</th>
+                    <th>Is Primary</th>
+                    <th>Created</th>
+                    <th>Created By</th>
+                    <th>Updated</th>
+                    <th>Row Version</th>
+                    <th>Employee Full Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.EmployeeTelephoneNumber)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Number</td>
+                        <td>@item.IsPrimary</td>
+                        <td>@item.Created</td>
+                        <td>@item.CreatedBy</td>
+                        <td>@item.Updated</td>
+                        <td>@Convert.ToBase64String(item.RowVersion)</td> <!-- Convert byte[] to Base64 for display -->
+                        <td>@item.Employee.FullName</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

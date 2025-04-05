@@ -1,0 +1,351 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.HeadCountItemManager.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["Entity"] = "HeadCountItems";
+    ViewData["BreadCrumb"] = "<a href='/HeadCountItems' class='breadcrumb-item'>HeadCountItems</a>";
+}
+<form method="post">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0">Create New HeadCountItem</h5>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.HeadCountTypeId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.HeadCountTypeId" class="form-control" asp-items="ViewBag.HeadCountTypeId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.EmployeeId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.EmployeeId" class="form-control select-search" asp-items="ViewBag.EmployeeId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.FirstName" class="control-label"></label>
+                        <input asp-for="HeadCountItem.FirstName" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.FirstName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.MiddleName" class="control-label"></label>
+                        <input asp-for="HeadCountItem.MiddleName" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.MiddleName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.LastName" class="control-label"></label>
+                        <input asp-for="HeadCountItem.LastName" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.Address" class="control-label"></label>
+                        <input asp-for="HeadCountItem.Address" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.Address" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.GenderId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.GenderId" class="form-control" asp-items="ViewBag.GenderId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.MaritalStatusId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.MaritalStatusId" class="form-control" asp-items="ViewBag.MaritalStatusId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.MilitaryStatusId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.MilitaryStatusId" class="form-control" asp-items="ViewBag.MilitaryStatusId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.ManagerId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.ManagerId" class="form-control" asp-items="ViewBag.ManagerId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.BirthDate" class="control-label"></label>
+                        <input asp-for="HeadCountItem.BirthDate" class="form-control" type="date" />
+                        <span asp-validation-for="HeadCountItem.BirthDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.JobTypeId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.JobTypeId" class="form-control" asp-items="ViewBag.JobTypeId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.JoiningDate" class="control-label"></label>
+                        <input asp-for="HeadCountItem.JoiningDate" class="form-control" type="date" />
+                        <span asp-validation-for="HeadCountItem.JoiningDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.Identification" class="control-label"></label>
+                        <input asp-for="HeadCountItem.Identification" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.Identification" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.IdentificationTypeId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.IdentificationTypeId" class="form-control" asp-items="ViewBag.IdentificationTypeId"></select>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.EmploymentTypeId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.EmploymentTypeId" class="form-control" asp-items="ViewBag.EmploymentTypeId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.Salary" class="control-label"></label>
+                        <input asp-for="HeadCountItem.Salary" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.Salary" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.NationalityId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.NationalityId" class="form-control" asp-items="ViewBag.NationalityId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.MedicalInsurance" class="control-label"></label>
+                        <input asp-for="HeadCountItem.MedicalInsurance" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.MedicalInsurance" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.ItcheckDate" class="control-label"></label>
+                        <input asp-for="HeadCountItem.ItcheckDate" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.ItcheckDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.ItcheckBy" class="control-label"></label>
+                        <input asp-for="HeadCountItem.ItcheckBy" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.ItcheckBy" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.HrcheckDate" class="control-label"></label>
+                        <input asp-for="HeadCountItem.HrcheckDate" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.HrcheckDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.HrcheckBy" class="control-label"></label>
+                        <input asp-for="HeadCountItem.HrcheckBy" class="form-control" />
+                        <span asp-validation-for="HeadCountItem.HrcheckBy" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.FromDepartmentJobTitleId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.FromDepartmentJobTitleId" class="form-control" asp-items="ViewBag.FromDepartmentJobTitleId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.ToDepartmentJobTitleId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.ToDepartmentJobTitleId" class="form-control" asp-items="ViewBag.ToDepartmentJobTitleId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.FromWorkingModelId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.FromWorkingModelId" class="form-control" asp-items="ViewBag.FromWorkingModelId"></select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="HeadCountItem.ToWorkingModelId" class="control-label"></label>
+                        <select asp-for="HeadCountItem.ToWorkingModelId" class="form-control" asp-items="ViewBag.ToWorkingModelId"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+            <a asp-page="Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                Cancel
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-arrow-left8"></i>
+                </span>
+            </a>
+            <button type="submit" class="btn btn-primary btn-labeled btn-labeled-end">
+                Create
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-paperplane"></i>
+                </span>
+            </button>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+
+        <script>
+
+            $(document).ready(function() {
+                $('#HeadCountItem_EmployeeId').change(function() {
+                    var selectedValue = $(this).val();
+                    $.ajax({
+                        type: 'GET',
+                        url: '@Url.Page("../Create")' + '?handler=LoadData&selectedValue=' + encodeURIComponent(selectedValue),
+                        contentType: 'application/json', // Set content type for JSON
+                        success: function(response) {
+                            console.log('Success:', response);
+                            $('#HeadCountItem_FirstName').val('');
+                            $('#HeadCountItem_FirstName').val(response.employee.firstName);
+                            $('#HeadCountItem_MiddleName').val('');
+                            $('#HeadCountItem_MiddleName').val(response.employee.middleName);
+                            $('#HeadCountItem_LastName').val('');
+                            $('#HeadCountItem_LastName').val(response.employee.lastName);
+                            $('#HeadCountItem_Address').val('');
+                            $('#HeadCountItem_Address').val(response.employee.address);
+                            $('#HeadCountItem_GenderId').val(response.employee.genderId);
+                            $('#HeadCountItem_MaritalStatusId').val(response.employee.maritalStatusId);
+                            $('#HeadCountItem_MilitaryStatusId').val(response.employee.militaryStatusId);
+                            $('#HeadCountItem_ManagerId').val(response.employee.managerId);
+                            $('#HeadCountItem_JobTypeId').val(response.employee.jobTypeId);
+                            $('#HeadCountItem_Identification').val('');
+                            $('#HeadCountItem_Identification').val(response.employee.identification);
+                            $('#HeadCountItem_IdentificationTypeId').val('');
+                            $('#HeadCountItem_IdentificationTypeId').val(response.employee.identificationTypeId);
+                            $('#HeadCountItem_EmploymentTypeId').val('');
+                            $('#HeadCountItem_EmploymentTypeId').val(response.employee.employmentTypeId);
+                            $('#HeadCountItem_Salary').val('');
+                            $('#HeadCountItem_Salary').val(response.employee.salary);
+                            $('#HeadCountItem_NationalityId').val(response.employee.nationalityId);
+                            $('#HeadCountItem_MedicalInsurance').val('');
+                            $('#HeadCountItem_MedicalInsurance').val(response.employee.medicalInsurance);
+                            $('#HeadCountItem_FromDepartmentJobTitleId').val(response.employee.jobTitleId);
+                            $('#HeadCountItem_ToDepartmentJobTitleId').val(response.employee.jobTitleId);
+                            $('#HeadCountItem_FromWorkingModelId').val(response.employee.workingModelId);
+                            $('#HeadCountItem_ToWorkingModelId').val(response.employee.workingModelId);
+
+                            if (response.employee.birthDate) {
+                            console.log('BirthDate (raw):', response.employee.birthDate); // Debugging
+
+                            // Extract the correct format (yyyy-MM-dd)
+                            var birthDate = new Date(response.employee.birthDate);
+                            var year = birthDate.getFullYear();
+                            var month = String(birthDate.getMonth() + 1).padStart(2, '0'); // Add leading zero
+                            var day = String(birthDate.getDate()).padStart(2, '0'); // Add leading zero
+                            var formattedDate = `${year}-${month}-${day}`;
+                            $('#HeadCountItem_BirthDate').val(formattedDate); // Assign the formatted date
+
+                            var birthDate = new Date(response.employee.birthDate);
+                            var year = birthDate.getFullYear();
+                            var month = String(birthDate.getMonth() + 1).padStart(2, '0'); // Add leading zero
+                            var day = String(birthDate.getDate()).padStart(2, '0'); // Add leading zero
+                            var formattedDate = `${year}-${month}-${day}`;
+                            $('#HeadCountItem_BirthDate').val(formattedDate); // Assign the formatted date
+
+                        
+
+                            } else {
+                                $('#HeadCountItem_BirthDate').val(''); // Clear if no birthDate
+
+                            }
+
+                            if (response.employee.joiningDate) 
+                            {
+                                console.log('joiningDate (raw):', response.employee.joiningDate); // Debugging
+
+                                // Extract the correct format (yyyy-MM-dd)
+                                var joiningDate = new Date(response.employee.joiningDate);
+                                var joinYear = joiningDate.getFullYear();
+                                var joinMonth = String(joiningDate.getMonth() + 1).padStart(2, '0'); // Add leading zero
+                                var joinDay = String(joiningDate.getDate()).padStart(2, '0'); // Add leading zero
+                                var formattedDateOfJoining = `${joinYear}-${joinMonth}-${joinDay}`;
+
+                                console.log('DateOfJoining (formatted):', formattedDateOfJoining); // Debugging
+
+                                $('#HeadCountItem_JoiningDate').val(formattedDateOfJoining); // Assign the formatted date
+                            } else {
+                                $('#HeadCountItem_JoiningDate').val(''); // Clear if no dateOfJoining
+                            }
+
+                            // if (response.employee.hrcheckDate)
+                            // {
+                            //     console.log('hrcheckDate (raw):', response.employee.hRCheckDate); // Debugging
+
+                            //     // Extract the correct format (yyyy-MM-dd)
+                            //     var hrDate = new Date(response.employee.hrcheckDate);
+                            //     var hrYear = hrcheckDate.getFullYear();
+                            //     var hrMonth = String(hrcheckDate.getMonth() + 1).padStart(2, '0'); // Add leading zero
+                            //     var hrDay = String(hrcheckDate.getDate()).padStart(2, '0'); // Add leading zero
+                            //     var formattedhrDate = `${hrYear}-${hrMonth}-${hrDay}`;
+
+                            //     console.log('DateOfHR (formatted):', formattedhrDate); // Debugging
+
+                            //     $('#HeadCountItem_HrcheckDate').val(formattedhrDate); // Assign the formatted date
+                            // } else {
+                            //     $('#HeadCountItem_HrcheckDate').val(''); // Clear if no dateOfJoining
+                            // }
+
+
+                        },
+                        error: function(error) {
+                            console.log('Error:', error);
+                        }
+                    });
+                });
+            });
+        </script>
+
+
+
+
+
+
+ //         var form = new FormData();
+        // form.append("selectedValue", "11");
+
+        // var settings = {
+        //   "url": "https://localhost:7064/HeadCountItem/Create?handler=LoadData&selectedValue=11",
+        //   "method": "GET",
+        // };
+
+        // $.ajax(settings).done(function (response) {
+        //   console.log(response);
+        // });
+        //     });
+        // });
+
+
+
+
+    }
+}

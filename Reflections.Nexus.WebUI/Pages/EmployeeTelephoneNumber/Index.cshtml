@@ -1,0 +1,91 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.EmployeeTelephoneNumber.IndexModel
+
+@{
+    ViewData["Title"] = "List";
+    ViewData["Entity"] = "EmployeeTelephoneNumber";
+    ViewData["BreadCrumb"] = "<a href='/EmployeeTelephoneNumber' class='breadcrumb-item'>EmployeeTelephoneNumber</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+<div class="card-header pb-0">
+        <h5 class="mb-0">EmployeeTelephoneNumber List</h5>
+    </div>
+<table class="table datatable table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].Id)
+        </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].IsPrimary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].Employee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].Type)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].Created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].Updated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeTelephoneNumber[0].UpdatedBy)
+            </th>
+            
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EmployeeTelephoneNumber) {
+        <tr>
+         <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPrimary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Updated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UpdatedBy)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id" class="text-teal"><i class="icon-pencil7"></i> Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id" class="text-primary"><i class="icon-file-text2"></i> Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id" class="text-pink"><i class="icon-bin"></i> Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

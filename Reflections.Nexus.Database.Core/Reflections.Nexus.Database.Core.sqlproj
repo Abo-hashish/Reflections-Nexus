@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Reflections.Nexus.Database.Core</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{f5ffd06e-7b2b-44ee-9280-0fac0ccc0cdc}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Reflections.Nexus.Database.Core</RootNamespace>
+    <AssemblyName>Reflections.Nexus.Database.Core</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>SQL_Latin1_General_CP1_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Snapshots" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Audit.sql" />
+    <Build Include="dbo\Tables\AuditObject.sql" />
+    <Build Include="dbo\Tables\AuditObjectProperty.sql" />
+    <Build Include="dbo\Tables\Capability.sql" />
+    <Build Include="dbo\Tables\Email.sql" />
+    <Build Include="dbo\Tables\Holiday.sql" />
+    <Build Include="dbo\Tables\MenuItem.sql" />
+    <Build Include="dbo\Tables\Notification.sql" />
+    <Build Include="dbo\Tables\NotificationUserAccount.sql" />
+    <Build Include="dbo\Tables\NotificationWorkFlowState.sql" />
+    <Build Include="dbo\Tables\PaidTimeOffDayType.sql" />
+    <Build Include="dbo\Tables\PaidTimeOffRequest.sql" />
+    <Build Include="dbo\Tables\PaidTimeOffRequestType.sql" />
+    <Build Include="dbo\Tables\PaidTimeOffVacationBank.sql" />
+    <Build Include="dbo\Tables\Report.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\Tables\RoleCapability.sql" />
+    <Build Include="dbo\Tables\RoleUserAccount.sql" />
+    <Build Include="dbo\Tables\UserAccount.sql" />
+    <Build Include="dbo\Tables\WorkFlow.sql" />
+    <Build Include="dbo\Tables\WorkFlowItem.sql" />
+    <Build Include="dbo\Tables\WorkFlowItemOwner.sql" />
+    <Build Include="dbo\Tables\WorkFlowItemStateHistory.sql" />
+    <Build Include="dbo\Tables\WorkFlowOwnerGroup.sql" />
+    <Build Include="dbo\Tables\WorkFlowOwnerGroupUserAccount.sql" />
+    <Build Include="dbo\Tables\WorkFlowState.sql" />
+    <Build Include="dbo\Tables\WorkFlowStateProperty.sql" />
+    <Build Include="dbo\Tables\WorkFlowTransition.sql" />
+    <Build Include="Security\V2Application.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\Report_RoleCapability.sql" />
+    <Build Include="dbo\Stored Procedures\ReportAudit.sql" />
+    <Build Include="dbo\Stored Procedures\ReportDelete.sql" />
+    <Build Include="dbo\Stored Procedures\ReportInsert.sql" />
+    <Build Include="dbo\Stored Procedures\ReportMyPaidTimeOffRequests.sql" />
+    <Build Include="dbo\Stored Procedures\ReportRoleCapability.sql" />
+    <Build Include="dbo\Stored Procedures\ReportRoleUserAccount.sql" />
+    <Build Include="dbo\Stored Procedures\ReportSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\ReportSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\ReportUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\RoleCapabilityDelete.sql" />
+    <Build Include="dbo\Stored Procedures\RoleCapabilityInsert.sql" />
+    <Build Include="dbo\Stored Procedures\RoleCapabilitySelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\RoleCapabilitySelectById.sql" />
+    <Build Include="dbo\Stored Procedures\RoleCapabilitySelectByRoleId.sql" />
+    <Build Include="dbo\Stored Procedures\RoleCapabilityUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\RoleDelete.sql" />
+    <Build Include="dbo\Stored Procedures\RoleInsert.sql" />
+    <Build Include="dbo\Stored Procedures\RoleSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\RoleSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\RoleSelectByUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUserAccountDelete.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUserAccountInsert.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUserAccountSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUserAccountSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUserAccountSelectByRoleId.sql" />
+    <Build Include="dbo\Stored Procedures\RoleUserAccountUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\UserAccountDelete.sql" />
+    <Build Include="dbo\Stored Procedures\UserAccountInsert.sql" />
+    <Build Include="dbo\Stored Procedures\UserAccountSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\UserAccountSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\UserAccountSelectByWorkFlowOwnerGroupId.sql" />
+    <Build Include="dbo\Stored Procedures\UserAccountUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerSelectByWorkFlowItemId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerSelectLastUserByGroupId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemOwnerUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemSelectByItemId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemSelectByWorkflowId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemStateHistoryDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemStateHistoryInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemStateHistorySelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemStateHistorySelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemStateHistorySelectByWorkFlowItemId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemStateHistoryUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowItemUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\AuditDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\AuditInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupSelectByWorkFlowId.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupSelectCountByNameWorkflowId.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertyDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUserAccountDelete.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertyDeleteByAuditObjectId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUserAccountInsert.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertyInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUserAccountSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertySelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUserAccountSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertySelectByAuditObjectId.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUserAccountSelectByWorkFlowOwnerGroupId.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertySelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowOwnerGroupUserAccountUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectPropertyUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowSelectByObjectName.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectSelectByObjectName.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateDelete.sql" />
+    <Build Include="dbo\Stored Procedures\AuditObjectUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateInsert.sql" />
+    <Build Include="dbo\Stored Procedures\AuditSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertyDelete.sql" />
+    <Build Include="dbo\Stored Procedures\AuditSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertyDeleteByWorkFlowStateId.sql" />
+    <Build Include="dbo\Stored Procedures\AuditUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertyInsert.sql" />
+    <Build Include="dbo\Stored Procedures\CapabilitySelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertySelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\CapabilitySelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertySelectById.sql" />
+    <Build Include="dbo\Stored Procedures\EmailDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertySelectByWorkFlowStateId.sql" />
+    <Build Include="dbo\Stored Procedures\EmailInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStatePropertyUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\EmailSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\EmailSelectByEmailStatusFlag.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\EmailSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateSelectByWorkFlowId.sql" />
+    <Build Include="dbo\Stored Procedures\EmailUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateSelectCountByWorkFlowOwnerGroupId.sql" />
+    <Build Include="dbo\Stored Procedures\HolidayDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowStateUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\HolidayInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowTransitionDelete.sql" />
+    <Build Include="dbo\Stored Procedures\HolidaySelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowTransitionInsert.sql" />
+    <Build Include="dbo\Stored Procedures\HolidaySelectById.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowTransitionSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\HolidayUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowTransitionSelectByFromStateId.sql" />
+    <Build Include="dbo\Stored Procedures\MenuItemSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowTransitionSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationDelete.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowTransitionUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationInsert.sql" />
+    <Build Include="dbo\Stored Procedures\WorkFlowUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationSelectByIdUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountDelete.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountInsert.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountSelectByUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountSelectByWorkFlowStateId.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationUserAccountUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateDelete.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateDeleteByNotificationUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateInsert.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateSelectByNotificationUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateSelectByWorkFlowStateId.sql" />
+    <Build Include="dbo\Stored Procedures\NotificationWorkFlowStateUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffDayTypeSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffDayTypeSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestDelete.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestInsert.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestSelectByCurrentOwner.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestSelectByUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestSelectByUserAccountIdYear.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestSelectPreviousByUserAccountId.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestTypeSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestTypeSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestUpdate.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffRequestUpdateCancelled.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankCopyYear.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankDelete.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankInsert.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankIsDuplicate.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankSelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankSelectById.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankSelectByUserAccountIdYear.sql" />
+    <Build Include="dbo\Stored Procedures\PaidTimeOffVacationBankSelectDistinctYears.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Snapshots\Reflections.Nexus.Database.Core_20241001_19-40-41.dacpac" />
+  </ItemGroup>
+</Project>

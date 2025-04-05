@@ -1,0 +1,372 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.Employee.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Entity"] = "Employees";
+    ViewData["BreadCrumb"] = "<a href='/Employees' class='breadcrumb-item'>Employees</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+
+    <div class="card-header">
+        <h5 class="card-title mb-0">View Employee Details</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-2  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Id)
+                                    </label>
+                                    <div class="col-lg-10">
+                                        @Html.DisplayFor(model => model.Employee.Id)
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.FirstName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.FirstName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.MiddleName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.MiddleName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.LastName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.LastName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Address)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.Address)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.BirthDate)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.BirthDate)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.JoiningDate)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.JoiningDate)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Identification)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.Identification)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.ExitDate)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.ExitDate)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Email)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.Email)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Salary)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.Salary)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.MedicalInsurance)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.MedicalInsurance)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Created)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.Created)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.CreatedBy)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.CreatedBy)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.Updated)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.Updated)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.UpdatedBy)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.UpdatedBy)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.Employee.RowVersion)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.Employee.RowVersion)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.City)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.City.Name)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.EmploymentType)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.EmploymentType.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.Gender)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.Gender.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.IdentificationType)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.IdentificationType.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.JobTitle)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.JobTitle.Name)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.JobType)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.JobType.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.Manager)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.Manager.Address)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                            @Html.DisplayNameFor(model => model.Employee.MaritalStatus)
+                                </label>
+                                <div class="col-lg-8">
+                            @Html.DisplayFor(model => model.Employee.MaritalStatus.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.MilitaryStatus)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.MilitaryStatus.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.Nationality)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.Nationality.Name)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Employee.WorkingModel)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Employee.WorkingModel.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+        <a asp-page="./Index" class="btn btn-primary btn-labeled btn-labeled-start">
+            Back
+            <span class="btn-labeled-icon bg-black bg-opacity-20">
+                <i class="icon-arrow-left8"></i>
+            </span>
+        </a>
+        <a asp-page="./Edit" class="btn btn-primary btn-labeled btn-labeled-end" asp-route-id="@Model.Employee.Id">
+                Edit
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-pencil7"></i>
+                </span>
+            </a>
+</div>
+</div>
+

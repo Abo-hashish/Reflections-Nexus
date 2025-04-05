@@ -1,0 +1,60 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.CompanyfileType.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Entity"] = "CompanyFileTypes";
+    ViewData["BreadCrumb"] = "<a href='/CompanyFileTypes' class='breadcrumb-item'>CompanyFileTypes</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+
+    <div class="card-header">
+        <h5 class="card-title mb-0">View CompanyFileType Details</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-2  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyFileType.Id)
+                                    </label>
+                                    <div class="col-lg-10">
+                                        @Html.DisplayFor(model => model.CompanyFileType.Id)
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.CompanyFileType.Value)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.CompanyFileType.Value)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+        <a asp-page="./Index" class="btn btn-primary btn-labeled btn-labeled-start">
+            Back
+            <span class="btn-labeled-icon bg-black bg-opacity-20">
+                <i class="icon-arrow-left8"></i>
+            </span>
+        </a>
+        <a asp-page="./Edit" class="btn btn-primary btn-labeled btn-labeled-end" asp-route-id="@Model.CompanyFileType.Id">
+                Edit
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-pencil7"></i>
+                </span>
+            </a>
+</div>
+</div>
+

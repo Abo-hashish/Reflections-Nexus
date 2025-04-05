@@ -1,0 +1,161 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.Company.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    ViewData["Entity"] = "Companies";
+    ViewData["BreadCrumb"] = "<a href='/Companies' class='breadcrumb-item'>Companies</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<form method="post">
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title mb-0">Edit Company</h5>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <input type="hidden" asp-for="Company.Id" />
+                <input type="hidden" asp-for="Company.Created" />
+                <input type="hidden" asp-for="Company.CreatedBy" />
+                <input type="hidden" asp-for="Company.Updated" />
+                <input type="hidden" asp-for="Company.UpdatedBy" />
+                <input type="hidden" asp-for="Company.RowVersion" />
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.Name" class="control-label"></label>
+                        <input asp-for="Company.Name" class="form-control" />
+                        <span asp-validation-for="Company.Name" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.EstablishDate" class="control-label"></label>
+                        <input asp-for="Company.EstablishDate" class="form-control" />
+                        <span asp-validation-for="Company.EstablishDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.CityId" class="control-label"></label>
+                        <select asp-for="Company.CityId" class="form-control" asp-items="ViewBag.CityId"></select>
+                        <span asp-validation-for="Company.CityId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.IndustryId" class="control-label"></label>
+                        <select asp-for="Company.IndustryId" class="form-control" asp-items="ViewBag.IndustryId"></select>
+                        <span asp-validation-for="Company.IndustryId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group mt-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="Company.IsActive" /> @Html.DisplayNameFor(model => model.Company.IsActive)
+                        </label>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.Town" class="control-label"></label>
+                        <input asp-for="Company.Town" class="form-control" />
+                        <span asp-validation-for="Company.Town" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.CompanyTypeId" class="control-label"></label>
+                        <select asp-for="Company.CompanyTypeId" class="form-control" asp-items="ViewBag.CompanyTypeId"></select>
+                        <span asp-validation-for="Company.CompanyTypeId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.Address" class="control-label"></label>
+                        <input asp-for="Company.Address" class="form-control" />
+                        <span asp-validation-for="Company.Address" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.Email" class="control-label"></label>
+                        <input asp-for="Company.Email" class="form-control" />
+                        <span asp-validation-for="Company.Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.ZipCode" class="control-label"></label>
+                        <input asp-for="Company.ZipCode" class="form-control" />
+                        <span asp-validation-for="Company.ZipCode" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.Website" class="control-label"></label>
+                        <input asp-for="Company.Website" class="form-control" />
+                        <span asp-validation-for="Company.Website" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.CommercialRegistrationNumber" class="control-label"></label>
+                        <input asp-for="Company.CommercialRegistrationNumber" class="form-control" />
+                        <span asp-validation-for="Company.CommercialRegistrationNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.TaxRegistrationNumber" class="control-label"></label>
+                        <input asp-for="Company.TaxRegistrationNumber" class="form-control" />
+                        <span asp-validation-for="Company.TaxRegistrationNumber" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Company.ParentId" class="control-label"></label>
+                        <select asp-for="Company.ParentId" class="form-control" asp-items="ViewBag.ParentId"></select>
+                        <span asp-validation-for="Company.ParentId" class="text-danger"></span>
+                    </div>
+                </div>
+                @* <div class="col-lg-6"> *@
+                @*     <div class="form-group"> *@
+                @*         <label class="control-label">Upload new image</label> *@
+                @*         <input asp-for="companyLogo" type="file" class="form-control file-input" data-show-upload="false" onchange="previewImage(this);" /> *@
+                @*         <span asp-validation-for="companyLogo" class="text-danger"></span> *@
+                @*     </div> *@
+                @* </div> *@
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <p>Current Photo</p>
+                        <img id="imagePreview" src="@Model.Company.LogoUrl" alt="image" style="width:80px" class="rounded-circle" />
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+                <a asp-page="Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                    Cancel
+                    <span class="btn-labeled-icon bg-black bg-opacity-20">
+                        <i class="icon-arrow-left8"></i>
+                    </span>
+                </a>
+                <button type="submit" class="btn btn-primary btn-labeled btn-labeled-end">
+                    Save
+                    <span class="btn-labeled-icon bg-black bg-opacity-20">
+                        <i class="icon-paperplane"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

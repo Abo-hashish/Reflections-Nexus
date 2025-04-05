@@ -1,0 +1,101 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.CompanytelephoneNumber.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["Entity"] = "CompanyEmployeeTelephoneNumber";
+    ViewData["BreadCrumb"] = "<a href='/CompanyEmployeeTelephoneNumber' class='breadcrumb-item'>CompanyEmployeeTelephoneNumber</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+        <form method="post">
+             <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Create New CompanyTelephoneNumber</h5>
+                </div>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                                @* <div class="col-lg-6"> *@
+                                @*     <div class="form-group"> *@
+                                @*         <label asp-for="CompanyTelephoneNumber.Id" class="control-label"></label> *@
+                                @*         <input asp-for="CompanyTelephoneNumber.Id" class="form-control" /> *@
+                                @*         <span asp-validation-for="CompanyTelephoneNumber.Id" class="text-danger"></span> *@
+                                @*     </div> *@
+                                @* </div> *@
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="CompanyTelephoneNumber.CompanyId" class="control-label"></label>
+                                        <select asp-for="CompanyTelephoneNumber.CompanyId" class ="form-control" asp-items="ViewBag.CompanyId"></select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="CompanyTelephoneNumber.PhoneNumber" class="control-label"></label>
+                                        <input asp-for="CompanyTelephoneNumber.PhoneNumber" class="form-control" />
+                                        <span asp-validation-for="CompanyTelephoneNumber.PhoneNumber" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="CompanyTelephoneNumber.TypeId" class="control-label"></label>
+                                        <select asp-for="CompanyTelephoneNumber.TypeId" class ="form-control" asp-items="ViewBag.TypeId"></select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group mt-3">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" asp-for="CompanyTelephoneNumber.IsPrimary" /> @Html.DisplayNameFor(model => model.CompanyTelephoneNumber.IsPrimary)
+                                        </label>
+                                    </div>
+                                </div>
+                                @* <div class="col-lg-6"> *@
+                                @*     <div class="form-group"> *@
+                                @*         <label asp-for="CompanyTelephoneNumber.Created" class="control-label"></label> *@
+                                @*         <input asp-for="CompanyTelephoneNumber.Created" class="form-control" /> *@
+                                @*         <span asp-validation-for="CompanyTelephoneNumber.Created" class="text-danger"></span> *@
+                                @*     </div> *@
+                                @* </div> *@
+                                @* <div class="col-lg-6"> *@
+                                @*     <div class="form-group"> *@
+                                @*         <label asp-for="CompanyTelephoneNumber.CreatedBy" class="control-label"></label> *@
+                                @*         <input asp-for="CompanyTelephoneNumber.CreatedBy" class="form-control" /> *@
+                                @*         <span asp-validation-for="CompanyTelephoneNumber.CreatedBy" class="text-danger"></span> *@
+                                @*     </div> *@
+                                @* </div> *@
+                                @* <div class="col-lg-6"> *@
+                                @*     <div class="form-group"> *@
+                                @*         <label asp-for="CompanyTelephoneNumber.Updated" class="control-label"></label> *@
+                                @*         <input asp-for="CompanyTelephoneNumber.Updated" class="form-control" /> *@
+                                @*         <span asp-validation-for="CompanyTelephoneNumber.Updated" class="text-danger"></span> *@
+                                @*     </div> *@
+                                @* </div> *@
+                                @* <div class="col-lg-6"> *@
+                                @*     <div class="form-group"> *@
+                                @*         <label asp-for="CompanyTelephoneNumber.UpdatedBy" class="control-label"></label> *@
+                                @*         <input asp-for="CompanyTelephoneNumber.UpdatedBy" class="form-control" /> *@
+                                @*         <span asp-validation-for="CompanyTelephoneNumber.UpdatedBy" class="text-danger"></span> *@
+                                @*     </div> *@
+                                @* </div> *@
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+                    <a asp-page="Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                        Cancel
+                        <span class="btn-labeled-icon bg-black bg-opacity-20">
+                            <i class="icon-arrow-left8"></i>
+                        </span>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-labeled btn-labeled-end">
+                        Create
+                        <span class="btn-labeled-icon bg-black bg-opacity-20">
+                            <i class="icon-paperplane"></i>
+                        </span>
+                    </button>
+                </div>
+
+             </div>
+        </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

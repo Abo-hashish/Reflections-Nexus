@@ -1,0 +1,830 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "Reflections.Nexus.Database.CoreContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models2",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Reflections.Nexus.Shared",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Audit]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AuditObject]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AuditObjectProperty]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Capability]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Email]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Holiday]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MenuItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Notification]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowState]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffDayType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequest]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestType]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBank]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Report]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Role]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RoleCapability]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RoleUserAccount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UserAccount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlow]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowItem]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwner]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroup]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccount]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowState]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateProperty]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransition]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AuditDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertyDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertyDeleteByAuditObjectId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertyInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertySelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertySelectByAuditObjectId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertySelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectPropertyUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectSelectByObjectName]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditObjectUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[AuditUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CapabilitySelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[CapabilitySelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EmailDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EmailInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EmailSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EmailSelectByEmailStatusFlag]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EmailSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[EmailUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[HolidayDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[HolidayInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[HolidaySelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[HolidaySelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[HolidayUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[MenuItemSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationSelectByIdUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountSelectByUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountSelectByWorkFlowStateId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationUserAccountUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateDeleteByNotificationUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateSelectByNotificationUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateSelectByWorkFlowStateId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[NotificationWorkFlowStateUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffDayTypeSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffDayTypeSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestSelectByCurrentOwner]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestSelectByUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestSelectByUserAccountIdYear]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestSelectPreviousByUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestTypeSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestTypeSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffRequestUpdateCancelled]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankCopyYear]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankIsDuplicate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankSelectByUserAccountIdYear]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankSelectDistinctYears]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[PaidTimeOffVacationBankUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[Report_RoleCapability]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportAudit]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportMyPaidTimeOffRequests]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportRoleCapability]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportRoleUserAccount]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[ReportUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleCapabilityDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleCapabilityInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleCapabilitySelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleCapabilitySelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleCapabilitySelectByRoleId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleCapabilityUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleSelectByUserAccountId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUserAccountDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUserAccountInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUserAccountSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUserAccountSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUserAccountSelectByRoleId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[RoleUserAccountUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UserAccountDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UserAccountInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UserAccountSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UserAccountSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UserAccountSelectByWorkFlowOwnerGroupId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[UserAccountUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerSelectByWorkFlowItemId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerSelectLastUserByGroupId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemOwnerUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemSelectByItemId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemSelectByWorkflowId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistoryDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistoryInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistorySelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistorySelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistorySelectByWorkFlowItemId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemStateHistoryUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowItemUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupSelectByWorkFlowId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupSelectCountByNameWorkflowId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccountDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccountInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccountSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccountSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccountSelectByWorkFlowOwnerGroupId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowOwnerGroupUserAccountUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowSelectByObjectName]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertyDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertyDeleteByWorkFlowStateId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertyInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertySelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertySelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertySelectByWorkFlowStateId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStatePropertyUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateSelectByWorkFlowId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateSelectCountByWorkFlowOwnerGroupId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowStateUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransitionDelete]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransitionInsert]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransitionSelectAll]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransitionSelectByFromStateId]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransitionSelectById]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowTransitionUpdate]",
+         "ObjectType": 1
+      },
+      {
+         "Name": "[dbo].[WorkFlowUpdate]",
+         "ObjectType": 1
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

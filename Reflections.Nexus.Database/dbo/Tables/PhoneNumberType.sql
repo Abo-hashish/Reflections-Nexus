@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[PhoneNumberType]
+(
+	[Id] INT IDENTITY(1,1) NOT NULL PRIMARY KEY, 
+    [Value] NVARCHAR(30) UNIQUE NOT NULL
+)

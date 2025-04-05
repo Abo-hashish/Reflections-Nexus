@@ -1,0 +1,53 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.RequestStatus.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["Entity"] = "RequestStatuses";
+    ViewData["BreadCrumb"] = "<a href='/RequestStatuses' class='breadcrumb-item'>RequestStatuses</a>";
+}
+        <form method="post">
+             <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Create New RequestStatus</h5>
+                </div>
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                                @* <div class="col-lg-6"> *@
+                                @*     <div class="form-group"> *@
+                                @*         <label asp-for="RequestStatus.Id" class="control-label"></label> *@
+                                @*         <input asp-for="RequestStatus.Id" class="form-control" /> *@
+                                @*         <span asp-validation-for="RequestStatus.Id" class="text-danger"></span> *@
+                                @*     </div> *@
+                                @* </div> *@
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label asp-for="RequestStatus.Value" class="control-label"></label>
+                                        <input asp-for="RequestStatus.Value" class="form-control" />
+                                        <span asp-validation-for="RequestStatus.Value" class="text-danger"></span>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+                    <a asp-page="Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                        Cancel
+                        <span class="btn-labeled-icon bg-black bg-opacity-20">
+                            <i class="icon-arrow-left8"></i>
+                        </span>
+                    </a>
+                    <button type="submit" class="btn btn-primary btn-labeled btn-labeled-end">
+                        Create
+                        <span class="btn-labeled-icon bg-black bg-opacity-20">
+                            <i class="icon-paperplane"></i>
+                        </span>
+                    </button>
+                </div>
+
+             </div>
+        </form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

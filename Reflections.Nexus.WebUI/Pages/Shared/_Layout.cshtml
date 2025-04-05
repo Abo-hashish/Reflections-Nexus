@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Pages/SHared/_MasterLayout.cshtml";
+}
+
+@section MainStyle {
+    @await RenderSectionAsync("Style", required: false)
+}
+
+@section MainScript {
+
+   
+
+    @await RenderSectionAsync("Scripts", required: false)
+}
+
+<partial name="_MainSidebar" />
+
+<!-- Main content -->
+<div class="content-wrapper">
+
+    <!-- Inner content -->
+    <div class="content-inner">
+
+        <partial name="_PageHeader" />
+
+        <!-- Content area -->
+        <div class="content">
+
+            @RenderBody()
+
+        </div>
+        <!-- /content area -->
+
+        <partial name="_Footer" />
+
+    </div>
+    <!-- /inner content -->
+
+</div>
+<!-- /main content -->

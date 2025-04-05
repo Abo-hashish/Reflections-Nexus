@@ -1,0 +1,251 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.Account.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+    ViewData["Entity"] = "Users";
+    ViewData["BreadCrumb"] = "<a href='/Users' class='breadcrumb-item'>Users</a>";
+}
+
+
+<div class="card">
+
+    <div class="card-header">
+        <h5 class="card-title mb-0">View ApplicationUser Details</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.FirstName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.FirstName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.LastName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.LastName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.IsActive)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.IsActive)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-12">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-2  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.Id)
+                                    </label>
+                                    <div class="col-lg-10">
+                                        @Html.DisplayFor(model => model.ApplicationUser.Id)
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.UserName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.UserName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.NormalizedUserName)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.NormalizedUserName)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.Email)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.Email)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.NormalizedEmail)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.NormalizedEmail)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.EmailConfirmed)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.EmailConfirmed)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.PasswordHash)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.PasswordHash)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.SecurityStamp)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.SecurityStamp)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.ConcurrencyStamp)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.ConcurrencyStamp)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.PhoneNumber)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.PhoneNumber)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.PhoneNumberConfirmed)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.PhoneNumberConfirmed)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.TwoFactorEnabled)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.TwoFactorEnabled)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.LockoutEnd)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.LockoutEnd)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.LockoutEnabled)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.LockoutEnabled)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-6">
+                            <fieldset>
+                                <div class="form-group row col-form-label">
+                                    <label class="col-lg-4  fw-bold">
+                                        @Html.DisplayNameFor(model => model.ApplicationUser.AccessFailedCount)
+                                    </label>
+                                    <div class="col-lg-8">
+                                        @Html.DisplayFor(model => model.ApplicationUser.AccessFailedCount)
+                                    </div>
+                                 </div>
+                            </fieldset>
+                        </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+        <a asp-page="./Index" class="btn btn-primary btn-labeled btn-labeled-start">
+            Back
+            <span class="btn-labeled-icon bg-black bg-opacity-20">
+                <i class="icon-arrow-left8"></i>
+            </span>
+        </a>
+        <a asp-page="./Edit" class="btn btn-primary btn-labeled btn-labeled-end" asp-route-id="@Model.ApplicationUser.Id">
+                Edit
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-pencil7"></i>
+                </span>
+            </a>
+</div>
+</div>
+

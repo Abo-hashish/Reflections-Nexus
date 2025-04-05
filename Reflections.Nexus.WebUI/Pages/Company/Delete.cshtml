@@ -1,0 +1,291 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.Company.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+    ViewData["Entity"] = "Companies";
+    ViewData["BreadCrumb"] = "<a href='/Companies' class='breadcrumb-item'>Companies</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">Are you sure you want to delete this?</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+             <div class="col-lg-12">
+                <fieldset>
+                    <div class="form-group row col-form-label">
+                        <label class="col-lg-2  fw-bold">
+                            @Html.DisplayNameFor(model => model.Company.Id)
+                        </label>
+                        <div class="col-lg-10">
+                            @Html.DisplayFor(model => model.Company.Id)
+                        </div>
+                    </div>
+                </fieldset>
+             </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Name)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Name)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.EstablishDate)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.EstablishDate)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.IsActive)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.IsActive)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Town)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Town)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Address)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Address)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Email)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Email)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.ZipCode)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.ZipCode)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Website)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Website)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.CommercialRegistrationNumber)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.CommercialRegistrationNumber)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.TaxRegistrationNumber)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.TaxRegistrationNumber)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.LogoUrl)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.LogoUrl)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Created)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Created)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.CreatedBy)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.CreatedBy)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Updated)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Updated)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.UpdatedBy)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.UpdatedBy)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                   <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.RowVersion)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.RowVersion)
+                                </div>
+                             </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.City)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.City.Name)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.CompanyType)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.CompanyType.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Industry)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Industry.Value)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <div class="form-group row col-form-label">
+                                <label class="col-lg-4  fw-bold">
+                                    @Html.DisplayNameFor(model => model.Company.Parent)
+                                </label>
+                                <div class="col-lg-8">
+                                    @Html.DisplayFor(model => model.Company.Parent.Address)
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+        </div>
+    </div>
+    
+     <form method="post">
+    <div class="card-footer d-flex justify-content-between align-items-center bg-light border-top-0">
+                    <input type="hidden" asp-for="Company.Id" />
+            <a asp-page="./Index" class="btn btn-primary btn-labeled btn-labeled-start">
+                Cancel
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-arrow-left8"></i>
+                </span>
+            </a>
+            <button type="submit" class="btn btn-danger btn-labeled btn-labeled-end">
+                Delete
+                <span class="btn-labeled-icon bg-black bg-opacity-20">
+                    <i class="icon-bin"></i>
+                </span>
+            </button>
+    </div>
+    </form>
+</div>

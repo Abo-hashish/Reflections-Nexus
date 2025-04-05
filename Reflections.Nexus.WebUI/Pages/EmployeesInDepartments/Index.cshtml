@@ -1,0 +1,110 @@
+﻿@page
+@model Reflections.Nexus.WebUI.Pages.EmployeesInDepartments.IndexModel
+
+@{
+    ViewData["Title"] = "List";
+    ViewData["Entity"] = "Employees In Departments";
+    ViewData["BreadCrumb"] = "<a href='/Employees' class='breadcrumb-item'>Employees</a>";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+<div class="card-header pb-0">
+        <div class="card-header pb-0">
+            <h5 class="mb-0">Salary Statistics</h5>
+            <p>Average Salary: @Model.AverageSalary.ToString("C")</p>
+            <p>Maximum Salary: @Model.MaximumSalary.ToString("C")</p>
+            <p>Minimum Salary: @Model.MinimumSalary.ToString("C")</p>
+        </div>
+    </div>
+    <div class="card-body">
+        <form method="get">
+            <div class="form-group">
+                <label for="DepartmentId">Department</label>
+                <select asp-for="SelectedDepartmentId" asp-items="@((SelectList)ViewData["DepartmentId"])" class="form-control">
+                    <option value="">-- Select Department --</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+    </div>
+<table class="table datatable table-striped table-hover table-bordered">
+    <thead>
+        <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Data[0].Id)
+        </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.Data[0].FirstName)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.Data[0].LastName)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.Data[0].Gender)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.Data[0].Email)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.Data[0].Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].EmploymentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].JobType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data[0].WorkingModel)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Data) {
+        <tr>
+         <td>
+            @Html.DisplayFor(modelItem => item.Id)
+        </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmploymentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkingModel)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id" class="text-teal"><i class="icon-pencil7"></i> Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id" class="text-primary"><i class="icon-file-text2"></i> Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id" class="text-pink"><i class="icon-bin"></i> Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
