@@ -8,6 +8,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0E4A4E2A-4CB5-4310-965B-773A92A0E1E0}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Project Files", "Project Files\", "{67AE6766-4AE5-4CB6-B0E6-EB12825F5C1A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C99521D8-0E57-47BA-8971-671A40C5F35C} = {C99521D8-0E57-47BA-8971-671A40C5F35C}
+		{F8C5C081-A012-4E21-AF5F-A52E687D052A} = {F8C5C081-A012-4E21-AF5F-A52E687D052A}
+	EndProjectSection
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_61133"
